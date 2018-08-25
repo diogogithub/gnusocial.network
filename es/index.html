@@ -7,7 +7,7 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="/assets/ico/favicon.png">
 
-    <title>GNU social &mdash; a free federated social network</title>
+    <title>Prueba GNU Social</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -52,81 +52,173 @@
 </div>
     
     <!-- Main jumbotron for a primary marketing message or call to action -->
-<div class="jumbotron">
+<div class="jumbotron" id="try-page">
   <div class="container">
-    <img src="/assets/img/gnu.png" class="img-responsive pull-right" />
-    <h1>Control your own social network</h1>
-
-    <p>GNU social is the largest decentralized social network on the web.</p>
-
-    <p><a class="btn btn-success btn-lg" href="/try">Join us</a></p>
-
+    <h1>Únete a la web social y federada</h1>
+    <p>¡No importa a qu&eacute; servidor te apuntes, eres parte de la familia!</p>
+    <a type="submit" class="btn btn-success btn-lg" href="gnusocial.php">Encuéntrame un servidor</a>
   </div>
 </div>
 
-<div class="container">
+<div class="container" id="comparison-boxes">
   <!-- Example row of columns -->
-
   <div class="row">
-
-    <p>GNU social is web software you can use to run your own social network, either privately or publicly.</p>
-
-    <ul>
-      <li>The software supports both single-user and community modes and can be used in an intranet environment or as part of the wider GNU social federated social network.</li>
-
-    <li>The software has been used in production environments for over
-      five years and is very stable. GNU social also easily
-      communicates with other GNU social servers, and traditional
-      social networks such as Twitter.</li>
-
-    <li>Because GNU social is written in the de-facto web standards of
-      PHP and MySQL, it runs virtually anywhere you can run a common
-      piece of web software, such as WordPress or Drupal.</li>
-
-    <li>And because GNU social is part of the GNU project, it's 100% free software, with no malicious features, spyware or advertising.</p>
-
-    </ul>
-
-    <p><a class="btn btn-primary btn-lg" href="/try/">Try GNU social today &raquo;</a></p>
-
-
-</div>
-
-
-  <div class="row">
-    <div class="col-md-6">
-      <h2>Run your own server!</h2>
-
-      <ol>
-	<li>Pick a web host. Any GNU/Linux or *BSD host with modern PHP and MySQL/MariaDB is fine.</li>
-	<li><a href="/resources/code/">Download the code</a>; we recommend using Git, but you can download a zip archive if you prefer.</li>
-	<li>Follow the <a href="https://git.gnu.io/gnu/gnu-social/blob/master/INSTALL">installation guide</a> and you'll be up and running in 15-minutes.</li>
-      </ol>
-   
-      
-    </div>
-    <div class="col-md-6">
-
-      <h2>Developers!</h2>
-
+    <div class="col-md-4">
+      <h2>Load Average</h2>
+      <p>Para gente t&eacute;cnica y no t&eacute;cnica</p>
+      <hr />
       <ul>
-	<li><tt>git clone https://git.gnu.io/gnu/gnu-social</tt></li>
-	<li><a href="https://git.gnu.io/gnu/gnu-social/issues">GNU social bug tracker</a></li>
-	<li>See you on #social on irc.freenode.net!</li>
-	<li>See you on gnusocial@conference.bka.li on XMPP!</li>
+	<li>Basado en Estados Unidos</li>
+	<li>Soporta HTTPS para un chateo seguro</li>
+	<li>Buen soporte para nuevas usuarias</li>
+      </ul>	  	  
+
+      <p><a href="https://loadaverage.org/" class="btn btn-primary btn-lg">Prueba Load Average</a></p>
+
+    </div>
+    <div class="col-md-4" id="quitter">
+      <h2>Quitter</h2>
+      <p>Genial para usuarias nuevas</p>
+      <hr />
+      <ul>
+	<li>Basado en Europa</li>
+	<li>Soporta HTTPS para un chateo seguro</li>
+	<li>Interfaz familiar y fácil de usar</li>
+      </ul>
+      <p><a href="https://quitter.es/" class="btn btn-primary btn-lg">Prueba Quitter (España)</a></p>
+      <p><a href="https://quitter.is/" class="btn btn-primary btn-lg">Prueba Quitter (Islandia)</a></p>
+      <p><a href="https://quitter.im/" class="btn btn-primary btn-lg">Prueba Quitter.im</a></p>
+    </div>
+    <div class="col-md-4">
+      <h2>gnusocial.net</h2>
+      <p>Comunidad en castellano</p>
+      <hr />
+      <ul>
+	<li>Basado en Europa</li>
+	<li>Soporta HTTPS para un chateo seguro</li>
+	<li>Interfaz familiar y f&aacute;cil de usar</li>
       </ul>
 
-      
-
+      <p><a href="https://gnusocial.net/" class="btn btn-primary btn-lg">Prueba gnusocial.net</a></p>
     </div>
   </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h2>gnusocial.cc</h2>
+      <p>Genial para usuarias nuevas y programadoras</p>
+      <hr />
+      <ul>
+	<li>Basado en Europa (Holanda)</li>
+	<li>Soporta HTTPS para un chateo seguro</li>
+	<li>Interfaz familiar y fácil de usar</li>
+      </ul>
+
+      <p><a href="https://gnusocial.cc/" class="btn btn-primary btn-lg">Try gnusocial.cc</a></p>
+     </div>
+   <!-- </div>-->
+
+    <div class="col-md-4">
+      <h2>gnusocial.no</h2>
+      <p>Servidor &quot;Vanilla&quot; de GNU social</p>
+      <hr />
+      <ul>
+	<li>Basado en Europa (Noruega)</li>
+	<li>Soporta HTTPS para un chateo seguro</li>
+	<li>Interfaz clásica de GNU social</li>
+      </ul>
+
+      <p><a href="https://gnusocial.no/" class="btn btn-primary btn-lg">Prueba gnusocial.no</a></p>
+     <!---</div>-->
+    </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h2>gnusocial.ch</h2>
+      <p>Comunidad en alem&aacute;n</p>
+      <hr />
+      <ul>
+        <li>Basado en Europa (Suiza)</li>
+        <li>Soporta HTTPS para un chateo seguro</li>
+        <li>Interfaz familiar y f&aacute;cil de usar</li>
+      </ul>
+
+      <p><a href="https://gnusocial.cc/" class="btn btn-primary btn-lg">Prueba gnusocial.ch</a></p>
+    </div>
+
+    </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <h2>LibreLabUCM</h2>
+      <p>Universidad Complutense de Madrid</p>
+      <hr />
+      <ul>
+        <li>Basado en Europe (Madrid | Espa&ntilde;a)</li>
+        <li>Soporta HTTPS para un chateo seguro</li>
+        <li>Interfaz familiar y f&aacute;cil de usar</li>
+      </ul>
+
+      <p><a href="https://gnusocial.librelabucm.org/" class="btn btn-primary btn-lg">Prueba LibreLabUCM</a></p>
+     </div>
+
+    <!--</div>-->
+
+  <div class="row">
+    <div class="col-md-4">
+      <h2>LegadoLibre</h2>
+      <p>Comunidad Latino Americana</p>
+      <hr />
+      <ul>
+        <li>Basado en Latino Am&eacute;rica (Buenos Aires | Argentina)</li>
+        <li><font color="red">Soporta conexiones HTTP por defecto</font></li>
+        <li>Interfaz familiar y f&aacute;cil de usar</li>
+      </ul>
+
+      <p><a href="http://legadolibre.mamalibre.com.ar/" class="btn btn-primary btn-lg">Prueba LegadoLibre</a></p>
+     </div>
+    <!--</div>-->
+
+  <div class="row">
+    <div class="col-md-4">
+      <h2>RainbowDash</h2>
+      <p>¡Una web social para bronies!</p>
+      <hr />
+      <ul>
+        <li>Basado en Estados Unidos (Arizona)</li>
+        <li><font color="red">No soporta conexiones HTTPS</font></li>
+        <li><font color="red">Versión muy anticuada de StatusNet</font></li>
+      </ul>
+
+      <p><a href="http://legadolibre.mamalibre.com.ar/" class="btn btn-primary btn-lg">Prueba LegadoLibre</a></p>
+    </div>
+
+  </div>
+
+
+  </div>
+
+  </div>
+
+  <div class="row">
+    <hr />
+
+    <p class="text-center"><small>¿Quieres que tu servidor aparezca aqu&iacute;? Contacta en <a href="https://gnusocial.cc/dalme">DalmeGNU</a></small></p>
+
   </div>
 
 
     <div class="footer well">
       <div class="container">
 
-    <p>This website is maintained by <a href="https://dalme.net">DalmeGNU</a>. Follow me on GNU social: <a href="https://gnusocial.net/liberadalinux">@dalme</a>.</p>
+
+    <p><a href="https://dalme.net">DalmeGNU</a> mantiene esta web. S&iacute;gueme en GNU social: <a href="https://gnusocial.cc/dalme">@dalme</a>.</p>
+
+    <p>Estamos en IRC, en el canal #social de <a href="http://freenode.net/">irc.freenode.net</a> y tambi&eacute;n en gnusocial@conference.bka.li a trav&eacute;s de XMPP</p>
+
+    <p>Y puedes informar de fallos y otros asuntos en <a href="https://git.gnu.io/gnu/gnu-social/issues">https://git.gnu.io</a></p>
+
+
 	<!-- l10n , alphabetical order.
 	It may be better just put international language code, like "en".
 	-->
