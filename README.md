@@ -8,7 +8,7 @@ This *web site* is aimed to provide a landing page with basic *information* abou
 
 ## report instance/node
 - Please clone this repository
-- Add your instance here
+- Add your instance here https://gnusocial.network/try/
 - Pull request to this repository
 
 or
@@ -25,12 +25,12 @@ Internationalization proccess is made per folder, so you can contribute translat
 
 *Report* bugs or suggestions to the respective translators here (add yourself):
 
-Catalan: 
-English: @dalme at gnusocial.cc
-Vasque:
-Galician: @xosem at mstdn.io
-Spanish:
+- Catalan 
+- English @dalme at gnusocial.cc
+- Vasque
+- Galician @xosem at mstdn.io
+- Spanish
 
 or
 
-- create an *issue* here
+- create an *issue* here https://gitlab.com/DalmeGNU/gnusocial.network/issues
