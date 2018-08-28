@@ -1,6 +1,6 @@
 # Description
 
-*GNU social* is the largest decentralized social network on the web.
+*GNU social* is the largest decentralized **social network** on the web.
 
 This *web site* is aimed to provide a landing page with basic *information* about the service.
 
@@ -26,9 +26,9 @@ Internationalization proccess is made per folder, so you can contribute translat
 *Report* bugs or suggestions to the respective translators here (add yourself):
 
 - Catalan 
-- English @dalme at gnusocial.cc
+- English - @dalme at gnusocial.cc
 - Vasque
-- Galician @xosem at mstdn.io
+- Galician - @xosem at mstdn.io
 - Spanish
 
 or
