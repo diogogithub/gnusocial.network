@@ -17,11 +17,14 @@ or
 
 ## l10n 
 
-Internationalization proccess is made per folder, so you can contribute translating to your language by 
+*Internationalization* proccess is made per folder, so you can contribute translating to your language by:
 - cloning this repository.
 - adding a folder using your language code for every *html* page.
 - put required files inside this new folder.
-- Update links to the other languages (use relative paths for compatibility).
+- update relative links to your language.
+- insert your language on the footpage.
+
+You **must** recreate the whole website using the proposed structure.
 
 *Report* bugs or suggestions to the respective translators here (add yourself):
 
