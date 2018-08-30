@@ -32,7 +32,7 @@ You **must** recreate the whole website using the proposed structure.
 - English - @dalme at gnusocial.cc
 - Vasque
 - Galician - @xosem at mstdn.io
-- Spanish
+- Spanish - @aab at khp.ignorelist.com
 
 or
 
