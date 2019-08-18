@@ -16,8 +16,8 @@ a {
 }
 
 .page {
-    padding: 40px 0;
-    width: 960px;
+    padding: 20px 0;
+    width: 66em;
     margin: 0 auto;
     overflow: auto;
 }
@@ -64,3 +64,279 @@ footer {
     text-align: center;
     border-top: 1px solid #B9BCC6;
 }
+
+.wrapper { 
+    display: flex;   
+    border-bottom: 1px solid #B9BCC6;
+}
+
+.wrapper p, .wrapper i, .wrapper b {
+    font-size: 0.8em;
+}
+
+.faq {
+    text-align: justify;
+    text-justify: inter-word;
+    flex: 0 0 60%;
+    padding-right: 30px;
+}
+
+.contact {
+    flex: 1;
+}
+
+.support {
+    display: flex;
+    justify-content: space-between;
+}
+
+.support-item {
+    flex-grow: 1;
+}
+
+.support-item-middle {
+    padding-right: 0.8em;
+    padding-left: 0.8em;
+}
+
+.header {
+    color: #3F3B3B;
+    text-align: left;
+    /*background: #EDE6D5 linear-gradient(#EDE6D5, #F5F5ED) repeat scroll 0% 0%;*/
+}
+  
+.header .nav-mobile {
+    dislay: none;
+}
+
+.header nav {
+    /*background: #F2EFE4;*/
+    /*border-bottom: 1px solid #D4CBB6;*/
+    padding: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: .9em;
+    font-weight: 400;
+}
+
+.header nav a {
+    color: #3F3D32;
+    padding: 10px;
+}
+
+.header nav a:hover {
+    color: #3F3D32;
+    text-decoration: underline;
+}
+
+.header nav.gnu-nav {
+    margin: 0;
+    /*background: #fcfbfa;*/
+}
+
+.header nav.gnu-nav .gnu-logo {
+    padding: 0;
+}
+
+.header nav.gnu-nav .gnu-logo img {
+    height: 34px;
+    vertical-align: bottom;
+}
+
+.header nav.gnu-nav a {
+    color: #817F7F;
+    font-size: .9em;
+    padding: 0;
+}
+
+.header nav.gnu-nav a:hover {
+    color: #525151;
+    text-decoration: none;
+}
+
+
+.header nav.gnu-nav a:after {
+    content: '\30FB';
+    padding: 0 5px;
+    color: #817F7F;
+    font-size: .9em;
+}
+
+.header nav.gnu-nav a:last-child:after {
+    content: '';
+    padding: 0;
+}
+
+.header nav.gnu-nav a:first-child:after {
+    content: '';
+}
+
+.header nav.gnu-nav a.join-fsf {
+    text-align: center;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 5px 18px 2px 18px;
+    background: #817F7F;
+    color: white;
+    text-decoration: none;
+}
+
+.header nav.gnu-nav a.join-fsf:hover {
+    background: #525151;
+}
+
+.header .container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.header .logo {
+    overflow: hidden;
+    text-align: center;
+    z-index: 1;
+}
+
+.header .logo img {
+    max-height: 100px;
+    vertical-align: top;
+}
+
+.header .logo h1 {
+    display: inline;
+    font-size: 4em;
+    line-height: 110px;
+    margin: 0 10px;
+    font-weight: 600;
+}
+
+.header h2 {
+    z-index: 1;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.6em;
+    line-height: 1.3em;
+    margin-top: 20px;
+    font-weight: 300;
+    max-width: 760px;
+}
+
+.header .teaser {
+    margin-top: 40px;
+}
+
+.header p {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 760px;
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.header a.learn-more {
+    color: rgb(240, 255, 135);
+    text-decoration: none;
+}
+
+.header a.learn-more:hover {
+    color: rgb(240, 255, 135);
+    text-decoration: none;
+}
+
+.fsf-banner {
+    background: #b11107;
+    border-top: 4px solid #840902;
+    color: white;
+    overflow: hidden;
+    padding: 10px 0;
+  }
+  
+  .fsf-banner .container {
+    padding: 20px;
+  }
+  
+  .fsf-logo {
+    display: inline-block;
+  }
+  
+  .fsf-banner .left {
+    float: left;
+    width: 50%;
+  }
+  
+  .fsf-banner .right {
+    float: right;
+    width: 50%;
+  }
+  
+  .fsf-banner img {
+    float: left;
+  }
+  
+  .fsf-banner p {
+    font-style: italic;
+  }
+  
+  #join-fsf {
+    margin: 20px 0 0 0;
+    width: auto;
+  }
+  
+  #join-fsf a {
+    margin: 20px 0 0 0;
+    background: #ddd;
+    display: inline-block;
+    border-radius: 16px;
+    padding: 10px 20px;
+    color: #b11107;
+    font-weight: bold;
+    text-decoration: none;
+    border: 4px solid white;
+    font-size: 1.4em;
+  }
+  
+  #fssbox {
+    padding-top: 20px;
+  }
+  
+  #fssbox form {
+    margin-bottom: 40px;
+    margin-top: 20px;
+  }
+  
+  #fssbox p {
+    margin-left: 0;
+    margin-bottom: 5px;
+    margin-right: 20px;
+    font-style: normal;
+  }
+  
+  #fssbox p a {
+    font-weight: bold;
+    color: white;
+  }
+  
+  #fssbox input[type='text'] {
+    border: 2px solid #840902;
+    border-radius: 8px;
+    padding: 5px 10px;
+  }
+  
+  #fssbox input[type='submit'] {
+    background: #ddd;
+    margin-left: 5px;
+    display: inline-block;
+    border-radius: 16px;
+    padding: 2px 8px;
+    font-weight: bold;
+    color: #b11107;
+    font-weight: bold;
+    text-decoration: none;
+    border: 4px solid white;
+  }
