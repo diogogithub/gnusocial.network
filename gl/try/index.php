@@ -1,16 +1,40 @@
 <!DOCTYPE html>
-<html lang="gl">
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="shortcut icon" href="../favicon.ico">
 
         <title>GNU social &mdash; plataforma de comunicación social feita con software libre</title>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.css">
         <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
-        <link rel="stylesheet" href="assets/css/layout.css">
+        <link rel="stylesheet" href="../assets/css/layout.css">
+        <style>
+        #nodes {
+            font-family: Helvetica, Arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #nodes td, #nodes th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #nodes tr:nth-child(even){background-color: #f2f2f2;}
+
+        #nodes tr:hover {background-color: #ddd;}
+
+        #nodes th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #A22430;
+            color: white;
+        }
+        </style>
 
         <link rel="canonical" href="https://gnusocial.network/">
     </head>
@@ -18,7 +42,7 @@
     <body>
         <header>
             <nav class="gnu-nav">
-                <a href="https://gnu.org" class="gnu-logo"><img alt="GNU" src="assets/img/gnu-transparent.png" /></a>
+                <a href="https://gnu.org" class="gnu-logo"><img alt="GNU" src="../assets/img/gnu-transparent.png" /></a>
                 <a href="https://gnu.org/gnu/gnu.html">Sobre GNU</a>
                 <a href="https://gnu.org/philosophy/philosophy.html">Filosofía</a>
                 <a href="https://gnu.org/licenses/licenses.html">Licenzas</a>
@@ -33,7 +57,7 @@
 
         <section id="intro-section">
             <h1>
-                <a href="#"><img src="assets/img/logo.png" alt="GNU social"></a>
+                <a href="../index.html"><img src="../assets/img/logo.png" alt="GNU social"></a>
             </h1>
 
             <h2>Rede social 
@@ -46,76 +70,74 @@
             </div>
         </section>
 
-        <section id="about-section">
-            <h2>O proxecto</h2>
-            <p>GNU social é a continuación do proxecto StatusNet, un software de interacción social para comunicacións públicas e privadas.
-                Conta cunha ampla comunidade de usuarios e institucións que o mantén e mellora, entre elas a <a href="https://status.fsf.org/">Free Software Foundation</a>.</p>
-            <p><strong>GNU social</strong> conéctate a unha rede <strong>libre</strong> de miles de comunidades que conversan a diario sobre calquera tema que poidas imaxinar, cada unha formando parte do conxunto.</p>
-            <h2>Características</h2>
-            <ul>
-                <li><strong>Versátil.</strong> GNU social da servizo tanto a un usuario como a comunidades enteiras que interactúan nunha rede local ou como parte da gran Rede Libre.</li>
-                <li><strong>Estable.</strong> GNU social leva máis de dez anos sendo utilizado en entornos de produción.</li>
-                <li><strong>Mínimos requerimentos.</strong> Como GNU social é libre e de pequeno tamaño, funcionará case en calquera lugar onde funcionen ferramentas tipo WordPress ou Drupal. Ter JavaScript é optativo.</li>
-                <li><strong>Intimidade.</strong> GNU social é parte do proxecto GNU, é 100% software libre, sen características perniciosas nen software espía.</li>
-            </ul>
-        </section>
+        <section id="try-section">
+            <?php
+            $query = urlencode('
+            {
+              nodes(platform: "gnusocial") {
+                openSignups
+                name
+                host
+                countryCode
+              }
+            }
+            ');
+            $query_result = json_decode(file_get_contents("https://the-federation.info/graphql?query={$query}"), true);
+            $query_result = $query_result['data']['nodes'];
+            // Filter out instances with closed signups
+            $nodes = array_filter($query_result, function ($node) {
+                return $node['openSignups'];
+            });
+            // garbage collect
+            unset($query_result);
+            ?>
+            <h2>Probar GNU social</h2>
+            <p>Teña en conta que os servidores que aquí se mostran non están xestionados por nós e non somos responsables do seu mantemento nin contido. Inclúense na lista como un servizo a comunidade.</p>
 
-        <section id="details-section">
-            <div class="col-wide">
-                <h2>Dúbidas?</h2>
-                <div class="paragraph" id="join">
-                    <h3>Onde me podo unir a GNU social?</h3>
-                    <p>Hai moitos tipos de instancias servidoras de GNU social activas neste momento!</p>
-                    <p>Podes buscar na web instancias GNU social do teu país ou integradas por xente con gustos similares
-                    aos teus!</p>
-                    <strong>Aviso: </strong><i>Ten en conta que o equipo de desenvolvemento de GNU social non é responsable
-                         do xeito en que os sitios web que utilizan o software xestionan os seus contidos.</i>
-                    <p>Preme <a href="try/">aquí</a> para ver unha lista de servidores populares de GNU social aos que podes unirte!</p>
-                </div>
-
-                <div class="paragraph">
-                    <h3>Quen coida de GNU social?</h3>
-                    <p>O actual equipo de desenvolvemento está dirixido por <a href="https://www.diogo.site/">Diogo Cordeiro</a>.
-                        En <a href="https://notabug.org/diogo/gnu-social/src/nightly/CREDITS.md">esta ligazón</a> está dispoñible unha lista coas persoas
-                        que contribúen ao código e colaboran no desenvolvemento do mesmo.
-                        Os fundadores do proxecto GNU social foron <a href="https://mat.tl/">Matt Lee</a>,
-                        <a href="https://en.wikipedia.org/wiki/Evan_Prodromou">Evan Prodromou</a> e
-                        <a href="http://mmn-o.se">Mikael Nordfeldth</a>.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-narrow">
-                <h2>Chat</h2>
-                <p>Conversa sobre o proxecto no noso canal IRC <a
-                    href="https://webchat.freenode.net/?channels=#social">#social</a> en irc.freenode.net</p>
-                <p>Contribúe ao código, informa de fallos e solicita novas características no <a
-                    href="https://notabug.org/diogo/gnu-social">repositorio</a>.
-                </p>
-                <p>Se estás a estudar, tamén podes solicitar participar no <a
-                    href="https://www.diogo.site/projects/GNU-social/soc">GNU social's Summer of Code</a>.
-                </p>
-            </div>
+            <h3>Servidores Públicos de GNU social</h3>
+            <table id="nodes">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>País</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($nodes as $node): ?>
+                    <tr>
+                        <td>
+                            <a href="https://www.<?php echo $node['host']; ?>"><?php echo $node['name']; ?></a>
+                        </td>
+                        <td>
+                            <?php echo $node['countryCode']; ?>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+            <p><br>Os datos de esta lista proceden de <a href="https://the-federation.info/">the federation - a statistics hub</a>, se
+            desexas aparecer nela, podes ir a https://the-federation.info/register/<yournode.tld>.
+            Pasados uns segundos, deberías ver o teu nodo na lista.</p>
         </section>
 
         <section id="support-section">
-            <h2>Axuda ao proxecto</h2>
+            <h2>Axuda ao Proxecto</h2>
             <div class="col-narrow">
                 <h3>Liberapay</h3>
-                <p><a href="https://liberapay.com/diogo/donate">Doar</a> ao desenvolvedor lider do proxecto,
-                <a href="https://www.diogo.site/support">Diogo Cordeiro</a>, con Liberapay</p>
+                <p><a href="https://liberapay.com/diogo/donate">Doa</a> ao principal desenvolvedor do proxecto, Diogo Cordeiro, con
+                    Liberapay</p>
             </div>
 
             <div class="col-narrow">
                 <h3>Tenda</h3>
-                <p>Merca a túa camiseta de GNU social <a
+                <p>Merca a camiseta GNU social en <a
                     href="https://hackersatporto.teemill.com/collection/gnu-social/">Hackers at Porto Clothing</a>
                 </p>
             </div>
 
             <div class="col-narrow">
                 <h3>Logos</h3>
-                <p><a href="assets/zip/logos.tar.gz">gs-logos.tar.gz</a> (14.2 kB)</p>
+                <p><a href="../assets/zip/logos.tar.gz">gs-logos.tar.gz</a> (14.2 kB)</p>
             </div>
         </section>
 
@@ -123,9 +145,9 @@
             <div class="fsf-banner">
                 <div class="container">
                     <div class="left">
-                        <a class="fsf-logo" href="http://www.fsf.org"><img src="assets/img/fsf.png" alt="Free Software Fundation"></a>
+                        <a class="fsf-logo" href="http://www.fsf.org"><img src="../assets/img/fsf.png" alt="Free Software Fundation"></a>
                         <div id="fssbox">
-                            <p>Subscríbete ao noso boletín mensual, o <a href="http://www.fsf.org/fss">Free Software Supporter</a></p>
+                            <p>Subscríbete ao boletín mensua de novas <a href="http://www.fsf.org/fss">Free Software Supporter</a></p>
                             <form action="https://my.fsf.org/civicrm/profile/create?reset=1&amp;gid=31" method="post">
                                 <div>
                                     <input name="postURL" type="hidden" value="">
@@ -141,8 +163,8 @@
                             </form>
                         </div>
                     </div>
-                    <div class="right">
-                        <p>"A nosa misión é preservar, protexer e promocionar a <strong>liberdade de utilizar, estudar, copiar, modificar e
+                     <div class="right">
+                        <p>"A nosa misión é preservar, protexer e promocionar a </strong>liberdade de utilizar, estudar, copiar, modificar e
                         distribuír</strong> software para computadoras, e defender os dereitos dos usuarios do <strong>Software Libre</strong>."</p>
                         <p id="join-fsf"><a href="https://www.fsf.org/associate/support_freedom">ÚNETE&nbsp;A&nbsp;FSF</a></p>
                     </div>
@@ -165,6 +187,7 @@
                         -->
                         <p><a href="#">English</a> — <a href="es/">Español</a> — <a href="gl/">Galego</a> - <a href="pt/">Português</a></p>
                         <!-- en of l10n links -->
+
                     </div>
                 </div>
             </div>
