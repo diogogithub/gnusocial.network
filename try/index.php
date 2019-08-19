@@ -2,8 +2,8 @@
 <html>
 
     <head>
-        <link rel="shortcut icon" href="assets/ico/favicon.ico">
-        <link rel="stylesheet" href="assets/css/layout.css">
+        <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+        <link rel="stylesheet" href="../assets/css/layout.css">
         <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
 
         <title>GNU social &mdash; a free software social networking platform</title>
@@ -37,7 +37,7 @@
     <body>
         <div class="header">
             <nav class="gnu-nav">
-                <a href="https://gnu.org" class="gnu-logo"><img alt="GNU" src="assets/img/gnu-transparent.png" /></a>
+                <a href="https://gnu.org" class="gnu-logo"><img alt="GNU" src="../assets/img/gnu-transparent.png" /></a>
                 <a href="https://gnu.org/gnu/gnu.html">About GNU</a>
                 <a href="https://gnu.org/philosophy/philosophy.html">Philosophy</a>
                 <a href="https://gnu.org/licenses/licenses.html">Licenses</a>
@@ -52,7 +52,7 @@
         <div class="page">
             <div class="intro-section">
                 <div class="logo">
-                    <a href="index.html"><img src="assets/img/logo.png" alt="GNU social"></a>
+                    <a href="../index.html"><img src="../assets/img/logo.png" alt="GNU social"></a>
                 </div>
 
                 <h2>The
@@ -60,7 +60,7 @@
                     software social networking platform.</h2>
 
                 <div class="download-buttons">
-                    <a href="#join">Join us</a>
+                    <a href="../index.html#join">Join us</a>
                     <a href="https://notabug.org/diogo/gnu-social/src/nightly/INSTALL.md">Install</a>
                 </div>
             </div>
@@ -130,14 +130,14 @@
 
                 <div class="support-item">
                     <h3>Logos</h3>
-                    <p><a href="assets/zip/logos.tar.gz">gs-logos.tar.gz</a> (14.2 kB)</p>
+                    <p><a href="../assets/zip/logos.tar.gz">gs-logos.tar.gz</a> (14.2 kB)</p>
                 </div>
             </div>
 
             <div class="fsf-banner">
                 <div class="container">
                     <div class="left">
-                        <a class="fsf-logo" href="http://www.fsf.org"><img src="assets/img/fsf.png" alt="Free Software Fundation"></a>
+                        <a class="fsf-logo" href="http://www.fsf.org"><img src="../assets/img/fsf.png" alt="Free Software Fundation"></a>
                         <div id="fssbox">
                             <p>Subscribe to our monthly newsletter, the <a href="http://www.fsf.org/fss">Free Software Supporter</a></p>
                             <form action="https://my.fsf.org/civicrm/profile/create?reset=1&amp;gid=31" method="post">
