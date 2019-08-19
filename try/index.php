@@ -116,6 +116,9 @@
                 <?php endforeach; ?>
                 </tbody>
             </table>
+            <p><br>This table's data comes from <a href="https://the-federation.info/">the federation - a statistics hub</a>, if
+            you want to be listed here, please go to https://the-federation.info/register/<yournode.tld>.
+            After some seconds, you should see your node added..</p>
         </section>
 
         <section id="support-section">
@@ -189,7 +192,7 @@
                 </div>
             </div>
         </footer>
-        
+
     </body>
 
 </html>
