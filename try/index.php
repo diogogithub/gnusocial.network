@@ -125,7 +125,7 @@
             <h2>Support the Project</h2>
             <div class="col-narrow">
                 <h3>Liberapay</h3>
-                <p><a href="https://liberapay.com/diogo/donate">Donate</a> to the project lead, Diogo Cordeiro, with
+                <p><a href="https://liberapay.com/diogo/donate">Donate</a> to the project lead developer, Diogo Cordeiro, with
                     Liberapay</p>
             </div>
 
@@ -186,7 +186,7 @@
                         <!-- l10n , alphabetical order.
                             It may be better just put international language code, like "en".
                         -->
-                        <p><a href="ca/">Català</a> — <a href="#">English</a> — <a href="es/">Español</a> — <a href="eu/">Euskera</a> — <a href="gl/">Galego</a></p>
+                        <p><a href="../ca/">Català</a> — <a href="../#">English</a> — <a href="../es/">Español</a> — <a href="../eu/">Euskera</a> — <a href="../gl/">Galego</a> - <a href="../pt/">Português</a></p>
                         <!-- en of l10n links -->
                     </div>
                 </div>
