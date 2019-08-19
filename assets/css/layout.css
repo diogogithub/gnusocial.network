@@ -1,0 +1,572 @@
+
+
+/* Copyright (C) 2019 Free Software Foundation, Inc.
+
+Authors:
+* Gonçalo Oliveira <goncalo.oli@outlook.com>
+* Diogo Cordeiro <diogo@fc.up.pt>
+
+This file is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This file is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details. */
+
+@charset UTF-8;
+*,
+::after,
+::before {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+::-moz-selection,
+::selection {
+    background: rgba(255, 255, 0, .3);
+    color: #000;
+}
+
+:after,
+:before {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: inherit;
+}
+
+body {
+    background: #E9EAED;
+    display: flex;
+    flex-direction: column;
+    font-family: "fira sans", 'Helvetica Neue', Helvetica, Arial, sans-serif, sans;
+    overflow-y: scroll;
+    margin: auto;
+    line-height: 1.4;
+    font-size: 17px;
+    color: #3F3B3B;
+}
+
+a {
+    text-decoration: none;
+    color: #A22430;
+}
+
+#intro-section {
+    text-align: center;
+    padding: inherit;
+    border-bottom: 0.0625em solid #B9BCC6;
+}
+
+#intro-section img {
+    max-width: 100%;
+    height: auto;
+}
+
+#intro-section h2 {
+    margin: 0 auto;
+    margin-bottom: 0.625em;
+    font-size: 40px;
+    line-height: 1.3em;
+    margin-top: 1.25em;
+    font-weight: 400;
+    max-width: 47.5em;
+}
+
+#intro-section .cta {
+    margin-top: 2.5em;
+    margin-bottom: 1em;
+}
+
+#intro-section .cta a {
+    font-size: 20px;
+    background-color: #A22430;
+    color: white;
+    display: inline;
+    padding: 15px 30px;
+    border-radius: 4px;
+    margin-right: 0.625em;
+    border: 0.0625em solid #7D1C25;
+}
+
+#intro-section .cta a:hover {
+    background-color: #7D1C25;
+}
+
+section,
+article {
+    margin: 0 15px;
+    display: block;
+    word-wrap: break-word;
+}
+
+section,
+article {
+    margin-bottom: 1em;
+}
+
+section p,
+article p {
+    margin: 0 0 16px;
+    text-indent: 0;
+    vertical-align: baseline;
+    white-space: normal;
+}
+
+@media (min-width: 568px) {
+    section,
+    article {
+        margin: 0 auto;
+        width: 90%;
+        max-width: 1200px;
+    }
+}
+
+header {
+    color: #3F3B3B;
+    text-align: left;
+}
+
+.footer {
+    text-align: center;
+    border-top: 0.0625em solid #B9BCC6;
+}
+
+.container {
+    padding: 40px 0;
+    width: 960px;
+    margin: 0 auto;
+    overflow: auto;
+}
+
+.footer .container>div {
+    width: 430px;
+    float: left;
+}
+
+.footer .left {
+    text-align: left;
+}
+
+.footer .right {
+    text-align: right;
+}
+
+
+/*
+ * FSF header
+ */
+
+header nav {
+    background: #F2EFE4;
+    border-bottom: 1px solid #D4CBB6;
+    padding: 8px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: .9em;
+    font-weight: 400;
+}
+
+header nav a {
+    color: #3F3D32;
+    padding: 0.625em;
+}
+
+header nav a:hover {
+    color: #3F3D32;
+    text-decoration: underline;
+}
+
+header nav.gnu-nav {
+    margin: 0;
+    background: #fcfbfa;
+}
+
+header nav.gnu-nav .gnu-logo {
+    padding: 0;
+}
+
+header nav.gnu-nav .gnu-logo img {
+    height: 2.125em;
+    vertical-align: bottom;
+}
+
+header nav.gnu-nav a {
+    color: #817F7F;
+    font-size: .9em;
+    padding: 0;
+}
+
+header nav.gnu-nav a:hover {
+    color: #525151;
+    text-decoration: none;
+}
+
+header nav.gnu-nav a:after {
+    content: '\30FB';
+    padding: 0 0.3125em;
+    color: #817F7F;
+    font-size: .9em;
+}
+
+header nav.gnu-nav a:last-child:after {
+    content: '';
+    padding: 0;
+}
+
+header nav.gnu-nav a:first-child:after {
+    content: '';
+}
+
+header nav.gnu-nav a.join-fsf {
+    text-align: center;
+    border-radius: 20px;
+    display: inline-block;
+    padding: 5px 18px 2px 18px;
+    background: #817F7F;
+    color: white;
+    text-decoration: none;
+}
+
+header nav.gnu-nav a.join-fsf:hover {
+    background: #525151;
+}
+
+header .container {
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    position: relative;
+    overflow: hidden;
+}
+
+header .logo {
+    overflow: hidden;
+    text-align: center;
+    z-index: 1;
+}
+
+header .logo img {
+    max-height: 6.25em;
+    vertical-align: top;
+}
+
+header p {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 47.5em;
+    font-weight: 300;
+    font-size: 1.2em;
+}
+
+header a {
+    text-decoration: none;
+}
+
+header a.learn-more {
+    color: rgb(240, 255, 135);
+    text-decoration: none;
+}
+
+header a.learn-more:hover {
+    color: rgb(240, 255, 135);
+    text-decoration: none;
+}
+
+
+/*
+ * FSF footer
+ */
+
+.fsf-banner {
+    background: #b11107;
+    border-top: 4px solid #840902;
+    color: white;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.fsf-logo {
+    display: inline-block;
+}
+
+.fsf-banner .left {
+    float: left;
+    width: 50%;
+}
+
+.fsf-banner .right {
+    float: right;
+    width: 50%;
+}
+
+.fsf-banner img {
+    float: left;
+}
+
+.fsf-banner p {
+    font-style: italic;
+}
+
+#join-fsf {
+    margin: 20px 0 0 0;
+    width: auto;
+}
+
+#join-fsf a {
+    margin: 20px 0 0 0;
+    background: #ddd;
+    display: inline-block;
+    border-radius: 16px;
+    padding: 10px 20px;
+    color: #b11107;
+    font-weight: bold;
+    text-decoration: none;
+    border: 4px solid white;
+    font-size: 1.4em;
+}
+
+#fssbox {
+    padding-top: 20px;
+}
+
+#fssbox form {
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+#fssbox p {
+    margin-left: 0;
+    margin-bottom: 5px;
+    margin-right: 20px;
+    font-style: normal;
+}
+
+#fssbox p a {
+    font-weight: bold;
+    color: white;
+}
+
+#fssbox input[type='text'] {
+    border: 2px solid #840902;
+    border-radius: 8px;
+    padding: 5px 10px;
+}
+
+#fssbox input[type='submit'] {
+    background: #ddd;
+    margin-left: 5px;
+    display: inline-block;
+    border-radius: 16px;
+    padding: 2px 8px;
+    font-weight: bold;
+    color: #b11107;
+    font-weight: bold;
+    text-decoration: none;
+    border: 4px solid white;
+}
+
+
+/*
+ * Footer
+ */
+
+.footer {
+    border-top: 4px solid #333;
+    padding-top: 15px;
+    background: #434342;
+    color: #888;
+}
+
+.footer h3 {
+    font-size: 1.3em;
+}
+
+.fsf-banner .container,
+.footer .container {
+    padding: 5px;
+    font-size: 0.8em;
+    overflow: hidden;
+}
+
+.fsf-banner .container {
+    padding: 20px;
+}
+
+.footer .left {
+    text-align: left;
+}
+
+.footer .right {
+    text-align: right;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: rgb(204, 99, 99);
+}
+
+
+/*
+ * Columns
+ *
+ * Two columns utilizing the golden ratio
+ */
+
+.col-wide,
+.col-narrow {
+    display: block;
+}
+
+@media (min-width: 568px) {
+    .col-wide {
+        display: table-cell;
+        width: 61.8%;
+        vertical-align: top;
+    }
+    .col-narrow {
+        display: table-cell;
+        width: 38.2%;
+        padding-left: 6%;
+        vertical-align: top;
+    }
+}
+
+
+/* Begin of Responsiveness instructions */
+
+@media screen and (max-width: 999px) {
+    .container {
+        width: 90%;
+        padding: 40px 5%;
+    }
+    header .container {
+        padding-bottom: 0;
+    }
+    header h2,
+    header p {
+        max-width: 100%;
+    }
+    header {
+        left: 0;
+        position: relative;
+        max-width: 100%;
+    }
+    .fsf-banner a {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .fsf-banner img {
+        float: none;
+    }
+    .fsf-banner p {
+        text-align: center;
+        width: auto;
+        margin-bottom: 10px;
+    }
+    .footer,
+    .footer .container>.left,
+    .footer .container>.right {
+        float: none;
+        text-align: center;
+        width: auto;
+    }
+    .footer .container>div:last-child {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 840px) {
+    .fsf-banner .right,
+    .fsf-banner .left {
+        float: none;
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    body {
+        font-size: 1em;
+    }
+    header .container {
+        text-align: center;
+        padding-top: 0;
+    }
+    header .logo {
+        text-align: center;
+    }
+    header .logo h1,
+    header .logo img {
+        float: none;
+    }
+    header .logo h1 {
+        display: block;
+        font-size: 3em;
+        line-height: 2em;
+        margin-left: 5px;
+    }
+    header h2 {
+        margin-top: 10px;
+        margin-bottom: 30px;
+        font-size: 1.8em;
+    }
+    header nav {
+        display: none;
+        padding: 0;
+    }
+    header nav a {
+        padding: 10px;
+        display: block;
+        text-align: left;
+        border-top: 1px solid #999;
+        font-size: 1.2em;
+        font-weight: 400;
+    }
+    header nav.gnu-nav a {
+        border-color: #ccc;
+    }
+    .fsf-banner img {
+        max-width: 100%;
+    }
+    .fsf-banner p {
+        margin-left: 0;
+        text-align: center;
+    }
+    .fsf-banner .right {
+        text-align: left;
+        float: left;
+    }
+    #join-fsf {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    header .links li {
+        float: none;
+        width: auto;
+        padding: 5px;
+    }
+    header,
+    header {
+        text-align: center;
+        margin: 0;
+        width: auto;
+    }
+}
+
+
+/* End of Responsiveness instructions */
+

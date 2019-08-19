@@ -4,13 +4,37 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="favicon.ico">
+        <link rel="shortcut icon" href="../favicon.ico">
 
         <title>GNU social &mdash; a free software social networking platform</title>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.css">
         <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
-        <link rel="stylesheet" href="assets/css/layout.css">
+        <link rel="stylesheet" href="../assets/css/layout.css">
+        <style>
+        #nodes {
+            font-family: Helvetica, Arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #nodes td, #nodes th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #nodes tr:nth-child(even){background-color: #f2f2f2;}
+
+        #nodes tr:hover {background-color: #ddd;}
+
+        #nodes th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #A22430;
+            color: white;
+        }
+        </style>
 
         <link rel="canonical" href="https://gnusocial.network/">
     </head>
@@ -18,7 +42,7 @@
     <body>
         <header>
             <nav class="gnu-nav">
-                <a href="https://gnu.org" class="gnu-logo"><img alt="GNU" src="assets/img/gnu-transparent.png" /></a>
+                <a href="https://gnu.org" class="gnu-logo"><img alt="GNU" src="../assets/img/gnu-transparent.png" /></a>
                 <a href="https://gnu.org/gnu/gnu.html">About GNU</a>
                 <a href="https://gnu.org/philosophy/philosophy.html">Philosophy</a>
                 <a href="https://gnu.org/licenses/licenses.html">Licenses</a>
@@ -33,7 +57,7 @@
 
         <section id="intro-section">
             <h1>
-                <a href="#"><img src="assets/img/logo.png" alt="GNU social"></a>
+                <a href="../index.html"><img src="../assets/img/logo.png" alt="GNU social"></a>
             </h1>
 
             <h2>The
@@ -46,70 +70,63 @@
             </div>
         </section>
 
-        <section id="about-section">
-            <h2>The Project</h2>
-            <p>GNU social is a continuation of the StatusNet project. It is a social communication software for public
-                and private communications.
-                It is widely supported and has a large userbase including
-                the <a href="https://status.fsf.org/">Free Software Foundation</a>.</p>
-            <p>GNU social connects you to a free network of thousands of communities that discuss daily on a variety of
-                topics, each being part of the whole.</p>
-            <h2>Features</h2>
-            <ul>
-                <li><strong>Versatile.</strong> GNU social supports both single-user and community modes and can be used in
-                    an intranet environment or as part of the wider Free Network.</li>
-                <li><strong>Stable.</strong> GNU social has been used in production environments for over ten years.</li>
-                <li><strong>Plug and Play.</strong> Because GNU social is minimal and libre, it runs virtually anywhere you
-                    can run a common piece of web software, such as WordPress or Drupal. JavaScript is optional.</li>
-                <li><strong>Privacy focused.</strong> GNU social is part of the GNU project, it's 100% free software, with
-                    no malicious features or spyware.</li>
-            </ul>
-        </section>
+        <section id="try-section">
+            <?php
+            $query = urlencode('
+            {
+              nodes(platform: "gnusocial") {
+                openSignups
+                name
+                host
+                countryCode
+              }
+            }
+            ');
+            $query_result = json_decode(file_get_contents("https://the-federation.info/graphql?query={$query}"), true);
+            $query_result = $query_result['data']['nodes'];
+            // Filter out instances with closed signups
+            $nodes = array_filter($query_result, function ($node) {
+                return $node['openSignups'];
+            });
+            // garbage collect
+            unset($query_result);
+            ?>
+            <h2>Try GNU social</h2>
+            <p>Please note that the servers listed here are not run by us and we are not responsible for their operation or
+            their content. They are listed here as a service to the community.</p>
 
-        <section id="details-section">
-            <div class="col-wide">
-                <h2>FAQ</h2>
-                <div class="paragraph" id="join">
-                    <h3>Where can I join GNU social?</h3>
-                    <p>There are many kinds of GNU social server instances online right now!</p>
-                    <p>You can search the web for GNU social instances in your country or that are run by people
-                        with similar interests to you!</p>
-                    <strong>Disclaimer: </strong><i>Please note that the GNU social development team is not responsible for
-                        the operation or content of sites that run its software.</i>
-                    <p>Click <a href="try/">here</a> to see a list of popular GNU social sites you can join!</p>
-                </div>
-
-                <div class="paragraph">
-                    <h3>Who makes GNU social?</h3>
-                    <p>The current development team is lead by <a href="https://www.diogo.site/">Diogo Cordeiro</a>. A
-                        list containing the current devs and other contributors is
-                        available <a href="https://notabug.org/diogo/gnu-social/src/nightly/CREDITS.md">here</a>.
-                        The founders of the GNU social project were <a href="https://mat.tl/">Matt Lee</a>,
-                        <a href="https://en.wikipedia.org/wiki/Evan_Prodromou">Evan Prodromou</a> and
-                        <a href="http://mmn-o.se">Mikael Nordfeldth</a>.
-                    </p>
-                </div>
-            </div>
-
-            <div class="col-narrow">
-                <h2>Chat</h2>
-                <p>Discuss the project on our IRC channel <a
-                    href="https://webchat.freenode.net/?channels=#social">#social</a> on irc.freenode.net</p>
-                <p>Contribute code, report bugs and request features on our <a
-                    href="https://notabug.org/diogo/gnu-social">repository</a>.
-                </p>
-                <p>If you are a student you can also apply to <a
-                    href="https://www.diogo.site/projects/GNU-social/soc">GNU social's Summer of Code</a>.
-                </p>
-            </div>
+            <h3>Public GNU social Servers</h3>
+            <table id="nodes">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Country</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($nodes as $node): ?>
+                    <tr>
+                        <td>
+                            <a href="https://www.<?php echo $node['host']; ?>"><?php echo $node['name']; ?></a>
+                        </td>
+                        <td>
+                            <?php echo $node['countryCode']; ?>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+            <p><br>This table's data comes from <a href="https://the-federation.info/">the federation - a statistics hub</a>, if
+            you want to be listed here, please go to https://the-federation.info/register/<yournode.tld>.
+            After some seconds, you should see your node added.</p>
         </section>
 
         <section id="support-section">
             <h2>Support the Project</h2>
             <div class="col-narrow">
                 <h3>Liberapay</h3>
-                <p><a href="https://liberapay.com/diogo/donate">Donate</a> to the project lead developer,
-                <a href="https://www.diogo.site/support">Diogo Cordeiro</a>, with Liberapay</p>
+                <p><a href="https://liberapay.com/diogo/donate">Donate</a> to the project lead developer, Diogo Cordeiro, with
+                    Liberapay</p>
             </div>
 
             <div class="col-narrow">
@@ -121,7 +138,7 @@
 
             <div class="col-narrow">
                 <h3>Logos</h3>
-                <p><a href="assets/zip/logos.tar.gz">gs-logos.tar.gz</a> (14.2 kB)</p>
+                <p><a href="../assets/zip/logos.tar.gz">gs-logos.tar.gz</a> (14.2 kB)</p>
             </div>
         </section>
 
@@ -129,7 +146,7 @@
             <div class="fsf-banner">
                 <div class="container">
                     <div class="left">
-                        <a class="fsf-logo" href="http://www.fsf.org"><img src="assets/img/fsf.png" alt="Free Software Fundation"></a>
+                        <a class="fsf-logo" href="http://www.fsf.org"><img src="../assets/img/fsf.png" alt="Free Software Fundation"></a>
                         <div id="fssbox">
                             <p>Subscribe to our monthly newsletter, the <a href="http://www.fsf.org/fss">Free Software Supporter</a></p>
                             <form action="https://my.fsf.org/civicrm/profile/create?reset=1&amp;gid=31" method="post">
@@ -169,7 +186,7 @@
                         <!-- l10n , alphabetical order.
                             It may be better just put international language code, like "en".
                         -->
-                        <p><a href="#">English</a> — <a href="es/">Español</a> — <a href="gl/">Galego</a> - <a href="pt/">Português</a></p>
+                        <p><a href="../#">English</a> — <a href="../es/">Español</a> — <a href="../gl/">Galego</a> - <a href="../pt/">Português</a></p>
                         <!-- en of l10n links -->
                     </div>
                 </div>
