@@ -118,7 +118,7 @@
             </table>
             <p><br>This table's data comes from <a href="https://the-federation.info/">the federation - a statistics hub</a>, if
             you want to be listed here, please go to https://the-federation.info/register/<yournode.tld>.
-            After some seconds, you should see your node added..</p>
+            After some seconds, you should see your node added.</p>
         </section>
 
         <section id="support-section">
@@ -186,7 +186,7 @@
                         <!-- l10n , alphabetical order.
                             It may be better just put international language code, like "en".
                         -->
-                        <p><a href="../ca/">Català</a> — <a href="../#">English</a> — <a href="../es/">Español</a> — <a href="../eu/">Euskera</a> — <a href="../gl/">Galego</a> - <a href="../pt/">Português</a></p>
+                        <p><a href="../#">English</a> — <a href="../es/">Español</a> — <a href="../gl/">Galego</a> - <a href="../pt/">Português</a></p>
                         <!-- en of l10n links -->
                     </div>
                 </div>
