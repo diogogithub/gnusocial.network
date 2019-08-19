@@ -16,7 +16,7 @@ This *web site* is aimed to provide a landing page with basic *information* abou
 
 - English - @dalme at gnusocial.cc
 - Spanish - @aab at khp.ignorelist.com
-- Galician - @xosem at mstdn.io
+- Galician - @idorun at gnusocial.cc
 - Portuguese - @diogo at loadaverage.org
 
 or
