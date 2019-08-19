@@ -1,41 +1,46 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
     <head>
-        <link rel="shortcut icon" href="../assets/ico/favicon.ico">
-        <link rel="stylesheet" href="../assets/css/layout.css">
-        <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="../favicon.ico">
 
         <title>GNU social &mdash; a free software social networking platform</title>
-        <meta name="viewport" content="initial-scale=1.0,maximum-scale=1.0,width=device-width" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.css">
+        <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
+        <link rel="stylesheet" href="../assets/css/layout.css">
         <style>
-            #nodes {
-              font-family: Helvetica, Arial, sans-serif;
-              border-collapse: collapse;
-              width: 100%;
-            }
+        #nodes {
+            font-family: Helvetica, Arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
 
-            #nodes td, #nodes th {
-              border: 1px solid #ddd;
-              padding: 8px;
-            }
+        #nodes td, #nodes th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
 
-            #nodes tr:nth-child(even){background-color: #f2f2f2;}
+        #nodes tr:nth-child(even){background-color: #f2f2f2;}
 
-            #nodes tr:hover {background-color: #ddd;}
+        #nodes tr:hover {background-color: #ddd;}
 
-            #nodes th {
-              padding-top: 12px;
-              padding-bottom: 12px;
-              text-align: left;
-              background-color: #A22430;
-              color: white;
-            }
+        #nodes th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #A22430;
+            color: white;
+        }
         </style>
+
+        <link rel="canonical" href="https://gnusocial.network/">
     </head>
 
     <body>
-        <div class="header">
+        <header>
             <nav class="gnu-nav">
                 <a href="https://gnu.org" class="gnu-logo"><img alt="GNU" src="../assets/img/gnu-transparent.png" /></a>
                 <a href="https://gnu.org/gnu/gnu.html">About GNU</a>
@@ -47,24 +52,25 @@
                 <a href="https://gnu.org/help/help.html">Help GNU</a>
                 <a class="join-fsf" href="https://www.fsf.org/associate/support_freedom">JOIN&nbsp;THE&nbsp;FSF</a>
             </nav>
-        </div>
+        </header>
 
-        <div class="page">
-            <div class="intro-section">
-                <div class="logo">
-                    <a href="../index.html"><img src="../assets/img/logo.png" alt="GNU social"></a>
-                </div>
 
-                <h2>The
-                    <a href="https://www.gnu.org/philosophy/free-sw.html">free/libre</a>
-                    software social networking platform.</h2>
+        <section id="intro-section">
+            <h1>
+                <a href="../index.html"><img src="../assets/img/logo.png" alt="GNU social"></a>
+            </h1>
 
-                <div class="download-buttons">
-                    <a href="../index.html#join">Join us</a>
-                    <a href="https://notabug.org/diogo/gnu-social/src/nightly/INSTALL.md">Install</a>
-                </div>
+            <h2>The
+                <a href="https://www.gnu.org/philosophy/free-sw.html">free/libre</a>
+                software social networking platform.</h2>
+
+            <div class="cta">
+                <a href="#join">Join us</a>
+                <a href="https://notabug.org/diogo/gnu-social/src/nightly/INSTALL.md">Install</a>
             </div>
+        </section>
 
+        <section id="try-section">
             <?php
             $query = urlencode('
             {
@@ -85,55 +91,51 @@
             // garbage collect
             unset($query_result);
             ?>
+            <h2>Try GNU social</h2>
+            <table id="nodes">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Country</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($nodes as $node): ?>
+                    <tr>
+                        <td>
+                            <a href="https://www.<?php echo $node['host']; ?>"><?php echo $node['name']; ?></a>
+                        </td>
+                        <td>
+                            <?php echo $node['countryCode']; ?>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+        </section>
 
-            <div class="paragraph">
-                <h2>Try GNU social</h2>
-                <table id="nodes">
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Country</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                        <?php foreach ($nodes as $node): ?>
-                            <tr>
-                                <td>
-                                    <a href="https://www.<?php echo $node['host']; ?>">
-                                        <?php echo $node['name']; ?>
-                                    </a>
-                                </td>
-                                <td>
-                                    <?php echo $node['countryCode']; ?>
-                                </td>
-                            </tr>
-                            <?php endforeach; ?>
-                    </tbody>
-                </table>
-            </div>
-
+        <section id="support-section">
             <h2>Support the Project</h2>
-            <div class="support">
-                <div class="support-item">
-                    <h3>Liberapay</h3>
-                    <p><a href="https://liberapay.com/diogo/donate">Donate</a> to the project lead, Diogo Cordeiro, with
-                        Liberapay</p>
-                </div>
-
-                <div class="support-item support-item-middle">
-                    <h3>Merchandising</h3>
-                    <p>Buy your own GNU social t-shirt at <a
-                        href="https://hackersatporto.teemill.com/collection/gnu-social/">Hackers at Porto Clothing</a>
-                    </p>
-                </div>
-
-                <div class="support-item">
-                    <h3>Logos</h3>
-                    <p><a href="../assets/zip/logos.tar.gz">gs-logos.tar.gz</a> (14.2 kB)</p>
-                </div>
+            <div class="col-narrow">
+                <h3>Liberapay</h3>
+                <p><a href="https://liberapay.com/diogo/donate">Donate</a> to the project lead, Diogo Cordeiro, with
+                    Liberapay</p>
             </div>
 
+            <div class="col-narrow">
+                <h3>Merchandising</h3>
+                <p>Buy your own GNU social t-shirt at <a
+                    href="https://hackersatporto.teemill.com/collection/gnu-social/">Hackers at Porto Clothing</a>
+                </p>
+            </div>
+
+            <div class="col-narrow">
+                <h3>Logos</h3>
+                <p><a href="../assets/zip/logos.tar.gz">gs-logos.tar.gz</a> (14.2 kB)</p>
+            </div>
+        </section>
+
+        <footer>
             <div class="fsf-banner">
                 <div class="container">
                     <div class="left">
@@ -162,7 +164,28 @@
                     </div>
                 </div>
             </div>
-        </div>
+            <div class="footer">
+                <div class="container">
+                    <div class="left">
+                        <p>Design by <a href="https://www.diogo.site/">Diogo Cordeiro</a> and Gonçalo Oliveira.</p>
+                        <p>Copyright 2010-2019 <a href="https://fsf.org">Free Software Foundation</a>, Inc.<br></p>
+                        <address>51 Franklin St, Fifth Floor, Boston, MA 02110, USA</address>
+                    </div>
+                    <div class="right">
+                        <p>Maintained by <a href="https://dalme.net">DalmeGNU</a>.
+                            Follow me on GNU social: <a href="https://gnusocial.cc/dalme">@dalme</a>.</p>
+                        <p>This website is licensed under
+                            the <a href="https://creativecommons.org/licenses/by-sa/4.0">CC-BY-SA</a> License.</p>
+                        <!-- l10n , alphabetical order.
+                            It may be better just put international language code, like "en".
+                        -->
+                        <p><a href="ca/">Català</a> — <a href="#">English</a> — <a href="es/">Español</a> — <a href="eu/">Euskera</a> — <a href="gl/">Galego</a></p>
+                        <!-- en of l10n links -->
+                    </div>
+                </div>
+            </div>
+        </footer>
+        
     </body>
 
 </html>
