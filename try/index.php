@@ -92,6 +92,10 @@
             unset($query_result);
             ?>
             <h2>Try GNU social</h2>
+            <p>Please note that the servers listed here are not run by us and we are not responsible for their operation or
+            their content. They are listed here as a service to the community.</p>
+
+            <h3>Public GNU social Servers</h3>
             <table id="nodes">
                 <thead>
                     <tr>
