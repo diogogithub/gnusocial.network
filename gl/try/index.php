@@ -4,13 +4,14 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="../favicon.ico">
+        <link rel="shortcut icon" href="../../favicon.ico">
 
         <title>GNU social &mdash; plataforma de comunicación social feita con software libre</title>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.css">
         <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
-        <link rel="stylesheet" href="../assets/css/layout.css">
+
+        <link rel="stylesheet" href="../../assets/css/layout.css">
         <style>
         #nodes {
             font-family: Helvetica, Arial, sans-serif;
@@ -42,7 +43,7 @@
     <body>
         <header>
             <nav class="gnu-nav">
-                <a href="https://gnu.org" class="gnu-logo"><img alt="GNU" src="../assets/img/gnu-transparent.png" /></a>
+                <a href="https://gnu.org" class="gnu-logo"><img alt="GNU" src="../../assets/img/gnu-transparent.png" /></a>
                 <a href="https://gnu.org/gnu/gnu.html">Sobre GNU</a>
                 <a href="https://gnu.org/philosophy/philosophy.html">Filosofía</a>
                 <a href="https://gnu.org/licenses/licenses.html">Licenzas</a>
@@ -57,15 +58,15 @@
 
         <section id="intro-section">
             <h1>
-                <a href="../index.html"><img src="../assets/img/logo.png" alt="GNU social"></a>
+                <a href="../index.html"><img src="../../assets/img/logo.png" alt="GNU social"></a>
             </h1>
 
-            <h2>Rede social 
+             <h2>Rede social 
                 <a href="https://www.gnu.org/philosophy/free-sw.html">libre</a>, plataforma de comunicación para persoas.
             </h2>
 
             <div class="cta">
-                <a href="#join">Únete a nós</a>
+                <a href="#join">Ven con nós!</a>
                 <a href="https://notabug.org/diogo/gnu-social/src/nightly/INSTALL.md">Instalar</a>
             </div>
         </section>
@@ -91,10 +92,10 @@
             // garbage collect
             unset($query_result);
             ?>
-            <h2>Probar GNU social</h2>
-            <p>Teña en conta que os servidores que aquí se mostran non están xestionados por nós e non somos responsables do seu mantemento nin contido. Inclúense na lista como un servizo a comunidade.</p>
+            <h2>Proba GNU social</h2>
+            <p>Ten en conta que os servidores de esta lista non están xestionados por nós, non somos responsables da súa xestión nin do seu contido. Móstranse aquí como un servizo a comunidade.</p>
 
-            <h3>Servidores Públicos de GNU social</h3>
+            <h3>Servidores Públicos GNU social</h3>
             <table id="nodes">
                 <thead>
                     <tr>
@@ -115,29 +116,30 @@
                 <?php endforeach; ?>
                 </tbody>
             </table>
-            <p><br>Os datos de esta lista proceden de <a href="https://the-federation.info/">the federation - a statistics hub</a>, se
-            desexas aparecer nela, podes ir a https://the-federation.info/register/<yournode.tld>.
-            Pasados uns segundos, deberías ver o teu nodo na lista.</p>
+            <p><br>Esta tabla procede de <a href="https://the-federation.info/">the federation - a statistics hub</a>, se desexas
+            aparecer nela, vai a https://the-federation.info/register/<yournode.tld>.
+            Pasados uns segundos, deberías aparecer na lista.</p>
         </section>
 
         <section id="support-section">
             <h2>Axuda ao Proxecto</h2>
             <div class="col-narrow">
                 <h3>Liberapay</h3>
-                <p><a href="https://liberapay.com/diogo/donate">Doa</a> ao principal desenvolvedor do proxecto, Diogo Cordeiro, con
+                <p><a href="https://liberapay.com/diogo/donate">Doar</a> ao desenvolvedor director do proxecto, Diogo Cordeiro, en
                     Liberapay</p>
             </div>
 
             <div class="col-narrow">
                 <h3>Tenda</h3>
-                <p>Merca a camiseta GNU social en <a
+
+                <p>Merca a túa camiseta de GNU social en <a
                     href="https://hackersatporto.teemill.com/collection/gnu-social/">Hackers at Porto Clothing</a>
                 </p>
             </div>
 
             <div class="col-narrow">
                 <h3>Logos</h3>
-                <p><a href="../assets/zip/logos.tar.gz">gs-logos.tar.gz</a> (14.2 kB)</p>
+                <p><a href="../../assets/zip/logos.tar.gz">gs-logos.tar.gz</a> (14.2 kB)</p>
             </div>
         </section>
 
@@ -145,9 +147,9 @@
             <div class="fsf-banner">
                 <div class="container">
                     <div class="left">
-                        <a class="fsf-logo" href="http://www.fsf.org"><img src="../assets/img/fsf.png" alt="Free Software Fundation"></a>
+                        <a class="fsf-logo" href="http://www.fsf.org"><img src="../../assets/img/fsf.png" alt="Free Software Fundation"></a>
                         <div id="fssbox">
-                            <p>Subscríbete ao boletín mensua de novas <a href="http://www.fsf.org/fss">Free Software Supporter</a></p>
+                            <p>Subscríbete ao boletín mensual, o <a href="http://www.fsf.org/fss">Free Software Supporter</a></p>
                             <form action="https://my.fsf.org/civicrm/profile/create?reset=1&amp;gid=31" method="post">
                                 <div>
                                     <input name="postURL" type="hidden" value="">
@@ -163,9 +165,9 @@
                             </form>
                         </div>
                     </div>
-                     <div class="right">
-                        <p>"A nosa misión é preservar, protexer e promocionar a </strong>liberdade de utilizar, estudar, copiar, modificar e
-                        distribuír</strong> software para computadoras, e defender os dereitos dos usuarios do <strong>Software Libre</strong>."</p>
+                    <div class="right">
+                        <p>"A nosa misión é conservar, protexer e promover a <strong>liberdade de utilizar, estudar, copiar,
+                        modificar e redistribuír</strong> o software para computadoras, así como defender os dereitos dos usuarios do <strong>Software Libre</strong>."</p>
                         <p id="join-fsf"><a href="https://www.fsf.org/associate/support_freedom">ÚNETE&nbsp;A&nbsp;FSF</a></p>
                     </div>
                 </div>
@@ -180,14 +182,13 @@
                     <div class="right">
                         <p>Mantido por <a href="https://dalme.net">DalmeGNU</a>.
                             Ségueme en GNU social: <a href="https://gnusocial.cc/dalme">@dalme</a>.</p>
-                        <p>Este sitio web ten licenza
+                        <p>Este sitio web está baixo os termos da licenza 
                              <a href="https://creativecommons.org/licenses/by-sa/4.0">CC-BY-SA</a>.</p>
                         <!-- l10n , alphabetical order.
                             It may be better just put international language code, like "en".
                         -->
-                        <p><a href="#">English</a> — <a href="es/">Español</a> — <a href="gl/">Galego</a> - <a href="pt/">Português</a></p>
+                        <p><a href="../../#">English</a> — <a href="../../es/">Español</a> — <a href="../../gl/">Galego</a> - <a href="../../pt/">Português</a></p>
                         <!-- en of l10n links -->
-
                     </div>
                 </div>
             </div>

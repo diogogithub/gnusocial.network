@@ -4,13 +4,13 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="shortcut icon" href="../favicon.ico">
+        <link rel="shortcut icon" href="../../favicon.ico">
 
         <title>GNU social &mdash; a free software social networking platform</title>
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.css">
         <link rel="stylesheet" href="https://code.cdn.mozilla.net/fonts/fira.css">
-        <link rel="stylesheet" href="../assets/css/layout.css">
+        <link rel="stylesheet" href="../../assets/css/layout.css">
         <style>
         #nodes {
             font-family: Helvetica, Arial, sans-serif;
@@ -42,7 +42,8 @@
     <body>
         <header>
             <nav class="gnu-nav">
-                <a href="https://gnu.org" class="gnu-logo"><img alt="GNU" src="../assets/img/gnu-transparent.png" /></a>
+                <a href="https://gnu.org" class="gnu-logo"><img alt="GNU" src="../../assets/img/gnu-transparent.png" /></a>
+
                 <a href="https://gnu.org/gnu/gnu.html">About GNU</a>
                 <a href="https://gnu.org/philosophy/philosophy.html">Philosophy</a>
                 <a href="https://gnu.org/licenses/licenses.html">Licenses</a>
@@ -57,7 +58,7 @@
 
         <section id="intro-section">
             <h1>
-                <a href="../index.html"><img src="../assets/img/logo.png" alt="GNU social"></a>
+                <a href="../../index.html"><img src="../../assets/img/logo.png" alt="GNU social"></a>
             </h1>
 
             <h2>The
@@ -138,7 +139,7 @@
 
             <div class="col-narrow">
                 <h3>Logos</h3>
-                <p><a href="../assets/zip/logos.tar.gz">gs-logos.tar.gz</a> (14.2 kB)</p>
+                <p><a href="../../assets/zip/logos.tar.gz">gs-logos.tar.gz</a> (14.2 kB)</p>
             </div>
         </section>
 
@@ -146,7 +147,7 @@
             <div class="fsf-banner">
                 <div class="container">
                     <div class="left">
-                        <a class="fsf-logo" href="http://www.fsf.org"><img src="../assets/img/fsf.png" alt="Free Software Fundation"></a>
+                        <a class="fsf-logo" href="http://www.fsf.org"><img src="../../assets/img/fsf.png" alt="Free Software Fundation"></a>
                         <div id="fssbox">
                             <p>Subscribe to our monthly newsletter, the <a href="http://www.fsf.org/fss">Free Software Supporter</a></p>
                             <form action="https://my.fsf.org/civicrm/profile/create?reset=1&amp;gid=31" method="post">
@@ -186,7 +187,7 @@
                         <!-- l10n , alphabetical order.
                             It may be better just put international language code, like "en".
                         -->
-                        <p><a href="../#">English</a> — <a href="../es/">Español</a> — <a href="../gl/">Galego</a> - <a href="../pt/">Português</a></p>
+                        <p><a href="../../#">English</a> — <a href="../../es/">Español</a> — <a href="../../gl/">Galego</a> - <a href="../../pt/">Português</a></p>
                         <!-- en of l10n links -->
                     </div>
                 </div>
